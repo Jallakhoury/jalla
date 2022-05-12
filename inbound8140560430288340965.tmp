@@ -1,0 +1,6 @@
+students=['jalla','nasr','khoury','ziena','zaid']
+s=input('enter name ')
+if s in students:
+    print(s,"graduated!")
+else:
+    print(s,"not graduated")

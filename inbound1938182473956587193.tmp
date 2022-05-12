@@ -1,0 +1,16 @@
+def f(p):
+    b=[]
+    s=""
+    while True:
+        t=str(p%2)
+        b.append(t)
+        p//=2
+        if p==0:
+            break
+    b.reverse()
+    for i in b:
+        s=s+i
+    return s
+
+s=int(input('enter a number'))
+print(f(s))

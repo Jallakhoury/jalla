@@ -1,0 +1,23 @@
+import pickle
+d={"read func in pickle is ":"load",
+   "name of this month is":"may","lenth of hello=":"5","100÷5=":"20",
+   "homework number is ":"1","my name is":"jalla"}
+outfile1=open("q.pkl","wb")
+pickle.dump(d,outfile1)
+outfile1.close()
+username=input("enter your name")
+infile=open("q.pkl","rb")
+qus=pickle.load(infile)
+infile.close()
+count=0
+
+for i in d:
+    ans=input(i)
+    print()
+    if ans==d[i]:
+        count+=1
+print(count,"from", len(d))
+outfile=open("r.csv",'w')
+result=[str(username),"\n",str(count)]
+outfile.writelines(result)
+outfile.close()
